@@ -104,3 +104,91 @@ html, body {
                         margin-bottom: 1em;
                         margin-left: 2em;
                     } 
+                    h1, h2, p {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    h1 {
+                        text-align: center;
+                        padding: 2em;
+                        margin: 3em;
+                    }
+                    em {
+                        font-weight: bold;
+                    }
+                    h2 {
+                        padding: 2em;
+                        text-align: center;
+                        border-bottom: solid black;
+                        margin: 3em;
+                    }
+                    main {
+                        width: 500px;
+                        margin: 30px;
+                        height: 350px;
+                        padding: 30px;
+                    }
+                    article p {
+                        text-align: center;
+                        
+                    }
+                    article h1 {
+                        font-size: 130%;
+                        margin-bottom: .25em;
+                    }
+                    article h2 {
+                        font-size: 110%;
+                        font-style: italic;
+                    }
+                    article {
+                        clear: left;
+                        width: fit-content;
+                        float: inherit;
+                        column-count: 1;
+                        margin: 10px;
+                    }
+                    div #aside-image {
+                        width: 360px;
+                        float: right;
+                        padding: 20px;
+                    }
+                    @media only screen and (max-width: 700px) {
+                        .menu-button-container {
+                            display: flex;
+                        }
+                        .menu {
+                            position: absolute;
+                            top: 0;
+                            margin-top: 50px;
+                            left: 0;
+                            flex-direction: column;
+                            width: 100%;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        #menu-toggle ~ .menu li {
+                            height: 0;
+                            margin: 0;
+                            padding: 0;
+                            border: 0;
+                            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+                        }
+                        #menu-toggle:checked ~ .menu li {
+                            border: 1px solid #333;
+                            height: 2.5em;
+                            padding: 0.5em;
+                            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+                        }
+                        .menu > li {
+                            display: flex;
+                            justify-content: center;
+                            margin: 0;
+                            padding: 0.5em 0;
+                            width: 100%;
+                            color: white;
+                            background-color: #222;
+                        }
+                        .menu > li:not(:last-child) {
+                            border-bottom: 1px solid #444;
+                        }
+                    }
